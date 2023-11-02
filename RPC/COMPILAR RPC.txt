@@ -1,0 +1,22 @@
+Compilar RPC : 
+    rpcgen -aNC + nombre con extensión .x
+    AL ejecutar este comando se creara un archivo_server.c que será el esqueleto del servidor donde tenemos que rellenarlo.
+
+Compilar archivos .c : 
+     gcc -w -c *.c 
+     (el -w nos sirve para ignorar los warnings)
+
+construir cliente:  //clienteRPC.o es el creado por nosotros y los demás son creados por rpc
+    gcc -o cliente archivo_xdr.o archivo_clnt.o clienteRPC.o -lnsl 
+    gcc -o CLIENTE primos_xdr.o primos_clnt.o cliente.o -lnsl   
+
+Lanzar cliente:
+ ./NombreCliente localhost opcion primeroNumero SegundoNumero
+
+      
+construir servidor: //servidorRPC.o es el creado por nosotros y los demás son creados por rpc
+    gcc -o servidor  archivo_xdr.o archivo_svc.o servidorRPC.o -lnsl  
+    gcc -o SERVIDOR  primos_xdr.o primos_svc.o servidor.o -lnsl  
+
+Lanzar servidor:
+./NombreServidor
