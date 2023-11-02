@@ -1,0 +1,10 @@
+COMPILAR
+*cliente:
+	gcc -O2 -Wall -pthread -o EJECUTABLE_CLI cliente.c
+
+*servidor: 
+    gcc -O2 -Wall -o EJECUTABLE_SER servidor.c funcpri.c
+
+LANZAR CLIENTE: ./EJECUTABLE_CLI localhost localhost 4400 opcion primerNumero segundoNumero
+
+LANZAR SERVIDOR : ./EJECUTABLE_SER
