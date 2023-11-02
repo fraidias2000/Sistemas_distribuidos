@@ -1,0 +1,12 @@
+COMPILAR
+*cliente:
+	gcc -O2 -Wall -o EJECUTABLE_CLI cliente.c
+LANZAR CLIENTE: ./EJECUTABLE_CLI localhost 4400 1 10
+
+*servidor: 
+    gcc -O2 -Wall -o EJECUTABLE_SER servidor.c funcpri.c
+LANZAR SERVIDOR: ./EJECUTABLE_SER
+
+
+
+
